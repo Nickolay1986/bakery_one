@@ -5,12 +5,12 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
 
     function createLanguageSelect(languages) {
         const selectElement = document.createElement('select');
-        selectElement.classList.add('select__element')
+        selectElement.classList.add('select__element');
         selectElement.id = 'languageSelect';
     
         languages.forEach(lang => {
             const option = document.createElement('option');
-            option.classList.add('select__lang--option')
+            option.classList.add('select__lang--option');
             option.value = lang;
             option.textContent = lang;
             selectElement.appendChild(option);
@@ -19,10 +19,10 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
         return selectElement;
     }
 
-    const headerWrapper = document.querySelector('.header__wrapper')
+    const headerWrapper = document.querySelector('.header__wrapper');
     const langOptions = createLanguageSelect(langs);
-    const logoLangs = document.querySelector('.logo__langs')
-    logoLangs.append(langOptions)
+    const logoLangs = document.querySelector('.logo__langs');
+    logoLangs.append(langOptions);
     const languageSelect = document.getElementById('languageSelect');
     const scriptUrl = new URL(import.meta.url);
     const jsonUrl = new URL('../data/nav.json', scriptUrl).href;
@@ -40,14 +40,19 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
     }
 
     function createListItem(obj, selectedLanguage) {
-        const listItem = createElWithClass('li', 'header__item')
+        const listItem = createElWithClass('li', 'header__item');
+        const path = window.location.pathname;
         let url = '';
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        // Проверка путей, включая вариант для GitHub Pages
+        const isRootPath = path === '/' || path.endsWith('/index.html') || path.endsWith('/repo-name/') || path.endsWith('/repo-name/index.html');
+        
+        if (isRootPath) {
             url = './assets/html/' + obj.url;
         } else {
             url = './' + obj.url;
         }
-        const link = createElWithClass('a', 'header__link')
+        
+        const link = createElWithClass('a', 'header__link');
         link.href = url;
 
         if (selectedLanguage === 'kz') {
@@ -67,8 +72,6 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
         });
     }
 
-    
-
     function handleLanguageChange(event) {
         const selectedLanguage = event.target.value;
         localStorage.setItem('selectedLanguage', selectedLanguage);
@@ -85,7 +88,6 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
             });
     }
     
-
     const nav = createNavElement();
     const headerList = createListElement(nav);
 
