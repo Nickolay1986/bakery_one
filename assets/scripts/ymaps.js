@@ -13,18 +13,17 @@ function init() {
         // balloonContentFooter: 'Всегда свежая выпечка',
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../assets/img/placemark.png',
+        iconImageHref: '/assets/img/placemark.png',
         iconImageSize: [80, 80],
         iconImageOffset: [-80, -65]
     });
 
     let placemarkBakery = new ymaps.Placemark(center, {
         balloonContent: `
-        
         <div class="balloon">
             <div class="balloon__header">
                 <div class="balloon_logo">
-                    <img src="./assets/img/favicon.png" alt="logo" class="header__logo-pic">
+                    <img src="/assets/img/favicon.png" alt="logo" class="header__logo-pic">
                 </div>
                 <div class="balloon_title">Настоящая пекарня</div>
             </div>
@@ -33,22 +32,20 @@ function init() {
                 <a href="tel:+77008008101">тлф: +77008008101</a>
             </div>
         </div>
-        
         `
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../assets/img/placemark.png',
+        iconImageHref: '/assets/img/placemark.png',
         iconImageSize: [80, 80],
         iconImageOffset: [-80, -65]
     });
 
     let placemarkBakery2 = new ymaps.Placemark(center, {
         balloonContent: `
-        
         <div class="balloon">
             <div class="balloon__header">
                 <div class="balloon_logo">
-                    <img src="./assets/img/favicon.png" alt="logo" class="header__logo-pic">
+                    <img src="/assets/img/favicon.png" alt="logo" class="header__logo-pic">
                 </div>
                 <div class="balloon_title">Настоящая пекарня</div>
             </div>
@@ -57,22 +54,21 @@ function init() {
                 тлф: <a href="tel:+77008008101">+77008008101</a>
             </div>
         </div>
-        
         `
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '.././assets/img/placemark_bakery002.png',
+        iconImageHref: '/assets/img/placemark_bakery002.png',
         iconImageSize: [80, 80],
         iconImageOffset: [-45, -65]
     });
 
-    map.controls.remove('geolocationControl'); //убрать геолокацию
-    map.controls.remove('searchControl');      //убрать поиск 
-    map.controls.remove('trafficControl');     //убрать контроль трафика 
-    map.controls.remove('typeSelector');       //убрать тип 
-    map.controls.remove('zoomControl');        //убрать зум
-    map.controls.remove('rulerControl');       //убрать уонтроль правил 
-    map.behaviors.disable(['scrollZoom']);     //откл скрол карты 
+    map.controls.remove('geolocationControl'); // убрать геолокацию
+    map.controls.remove('searchControl');      // убрать поиск
+    map.controls.remove('trafficControl');     // убрать контроль трафика
+    map.controls.remove('typeSelector');       // убрать тип
+    map.controls.remove('zoomControl');        // убрать зум
+    map.controls.remove('rulerControl');       // убрать контроль правил
+    map.behaviors.disable(['scrollZoom']);     // отключить скролл карты
     map.behaviors.disable(['drag']);
     // map.geoObjects.add(placemark);
     map.geoObjects.add(placemarkBakery2);
@@ -105,4 +101,3 @@ function init() {
 }
 
 ymaps.ready(init);
-
