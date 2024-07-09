@@ -11,7 +11,7 @@ const headerLogo = createElWithClass('div', 'header__logo');
 const logoLink = createElWithClass('a', 'header__logo-link');
 const logoImg = createElWithClass('img', 'header__logo-pic');
 let logoUrl;
-if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.hostname === 'nickolay1986.github.io') {
+if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.hostname === 'nickolay1986.github.io/index.html') {
     logoUrl = './assets/img/logo.png';
     logoLink.href = './index.html';
 
