@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Настоящая пекарня</title>
 </head>
 <body>
@@ -18,16 +18,15 @@
             <div class="logo__langs">
                 <div class="header__logo">
                     <a href="/" class="header__logo-link">
-                        <img src="./assets/img/logo.png" alt="logo" class="header__logo-pic">
+                        <img src="../img/logo.png" alt="logo" class="header__logo-pic">
                     </a>
                 </div> 
             </div>
-             
     
               <!-- <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__item">
-                        <a href="./assets/html/menu.html" class="header__link">Наши продукты</a>
+                        <a href="#!" class="header__link">Наши продукты</a>
                     </li>
                     <li class="header__item">
                         <a href="#!" class="header__link">Акции</a>
@@ -41,9 +40,12 @@
                     <li class="header__item">
                         <a href="#!" class="header__link">О нас</a>
                     </li>
-                    
+                    <li class="header__item">
+                        <a href="#!" class="header__link">Войти</a>
+                    </li>
                 </ul>
               </nav> -->
+
               <!-- <select id="languageSelect">
                 <option value="ru">ru</option>
                 <option value="kz">kz</option>
@@ -61,64 +63,49 @@
 
    <main class="main">
 
-    <!-- swiper start -->
-    <section class="swiper-slider">
-        <div class="wrapper">
-            <div class="swiper">                
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./assets/img/swiper_img/001.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/swiper_img/002.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/swiper_img/003.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/swiper_img/004.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/swiper_img/005.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
 
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-            </div>
-        </div>
-    </section>
-    <!-- swiper end -->
-
-    <!-- intro start -->
-    <section class="intro">
-        <div class="wrapper">
-            <div class="intro__content">
-                <!-- <h1 class="intro__title">
-                    Настоящая пекарня
-                </h1>
-                <p class="intro__subtitle">
-                    Мы — команда страстных пекарей, которые создают волшебство из муки, сахара и любви. Наша цель — радовать вас вкусной и ароматной выпечкой каждый день.
-                </p> -->
-            </div>            
-        </div>        
-    </section>
-    <!-- intro end -->
 
     <!-- products start -->
 
-    <!-- <section class="products">
+    <section class="products">
         <div class="wrapper">
             <h2 class="products__title">
                 Продукты
             </h2>
-            <div class="cards">
+            <div class="filter__menu">
+                <div class="filter__menu__title">
+                    Фильтрация
+                </div>
+                <div class="filter_sort">
+                    <div class="sort__price">
+                        <select>
+                          <option  value="" disabled selected>Сортировка по цене: </option>
+                          <option value="asc">сначала дешевле</option>
+                          <option value="desc">сначала дороже</option>
+                        </select>
+                    </div>            
+                    
+                    <div class="filter__block">
+                        <div class="checkbox__labels"></div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- второй вариант -->
+            <!-- <div class="sort__price">
+                <h3 class="sort__title">Сортировка по цене: </h3>
+                <select>
+                  <option value="" disabled selected></option>
+                  <option value="asc">сначала дешевле</option>
+                  <option value="desc">сначала дороже</option>
+                </select>
+            </div> -->
+            <div class="cards" id="cards">
 
-                <div class="card">
-                    <div class="card-pic">
-                        <img src="./assets/img/products/001.jpg" alt="001" class="img">
+                <!-- <div class="card">
+                    <div class="card__pic">
+                        <img src="../img/products/001.jpg" alt="001" class="img">
                     </div>
                     <p class="card__title">
                         Булочка с маком
@@ -133,8 +120,8 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-pic">
-                        <img src="./assets/img/products/001.jpg" alt="001" class="img">
+                    <div class="card__pic">
+                        <img src="../img/products/001.jpg" alt="001" class="img">
                     </div>
                     <p class="card__title">
                         Булочка с маком
@@ -149,8 +136,8 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-pic">
-                        <img src="./assets/img/products/001.jpg" alt="001" class="img">
+                    <div class="card__pic">
+                        <img src="../img/products/001.jpg" alt="001" class="img">
                     </div>
                     <p class="card__title">
                         Булочка с маком
@@ -162,38 +149,38 @@
                         <p class="card__price">Цена: </p>
                         <p class="card__cost">500тг.</p>
                     </div>
-                </div>
+                </div> -->
 
             </div>            
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="location">
-        <div class="wrapper">
-            <div class="location__content">
-                <h2 class="location__title">местоположение</h2>
-                <div class="map__container">
-                    <div class="ymaps__text">
-                        Здесь может быть какой-то текст или фотографии места
-                    </div>
-                    <div class="ymaps__block" id="ymap"></div>
+    <div class="container"></div><!-- тестовый блок для взаимодействия с текстовым файлом -->
+    <!-- products end -->
+    <!-- modal start -->
+    <!-- <section class="modal">
+        <div class="modal__wrapper">
+
+            <div class="modal__pic"><img src="../img/products/001.jpg" alt="" class="img"></div>
+            <div class="modal__content">
+                <div class="modal__text">
+                    <h3 class="modal__title">Булочка с маком</h3>
+                    <p class="modal__description">Нежная булочка с маком, словно облачко вкуса, расцветает на вашем языке. Её хрустящая корка, золотистая и ароматная, приоткрывает дверцу в мир</p>    
                 </div>
+
+                <div class="modal__footer">
+                    <p class="modal__price">Цена: </p>
+                    <p class="modal__cost">500тг.</p>
+                </div>
+                <div class="modal-close-btn">ЗАКРЫТЬ</div>
             </div>
+
         </div>
     </section> -->
-
-    <!-- products end -->
-
+    <!-- modal end -->
    </main>
-   <script type="module" src="./assets/scripts/modules/module-header.js"></script>
-   <script src="./assets/scripts/swiper-bundle.min.js"></script>
-   <script src="./assets/scripts/swiper-custom.js"></script>
-   <script type="module" src="./assets/scripts/index.js"></script>
-   <script type="module" src="./assets/scripts/nav.js"></script>
-   <script src="https://api-maps.yandex.ru/2.1/?apikey=3ead1b61-eb49-4787-9d05-0897597fe6ef&lang=ru_RU"></script>
-   <script type="module" src="./assets/scripts/ymaps.js"></script>
-   <!-- <script src="./assets/scripts/test.js"></script> -->
-   <!-- <script src="./assets/scripts/products.js"></script> -->
+   <script src="../scripts/nav.js"></script>
+   <script src="../scripts/products.js"></script>
    <!-- <script src="./assets/scripts/test.js"></script> -->
 </body>
 </html>

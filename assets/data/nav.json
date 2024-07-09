@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Наши продукты",
+        "nameKZ":"Біздің өнімдер",
+        "url": "menu.html"  
+    },
+    {
+        "name": "Акции",
+        "nameKZ":"Қор",
+        "url": "offers.html"   
+    },
+    {
+        "name": "Как купить",
+        "nameKZ":"Қалай сатып алуға болады",
+        "url": "buy.html" 
+    },
+    {
+        "name": "Контакты",
+        "nameKZ":"Контактілер",
+        "url": "contacts.html"
+    },
+    {
+        "name": "О нас",
+        "nameKZ":"Біз туралы",
+        "url": "about.html"   
+    }
+]
