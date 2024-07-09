@@ -61,7 +61,7 @@ function init() {
         `
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../../assets/img/placemark_bakery002.png',
+        iconImageHref: '.././assets/img/placemark_bakery002.png',
         iconImageSize: [80, 80],
         iconImageOffset: [-45, -65]
     });
