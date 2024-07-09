@@ -9,13 +9,16 @@ const headerWrapper = createElWithClass('div', 'header__wrapper');
 const logoLangs = createElWithClass('div', 'logo__langs');
 const headerLogo = createElWithClass('div', 'header__logo');
 const logoLink = createElWithClass('a', 'header__logo-link');
-logoLink.href = './';
 const logoImg = createElWithClass('img', 'header__logo-pic');
 let logoUrl;
 if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.hostname === 'nickolay1986.github.io') {
     logoUrl = './assets/img/logo.png';
+    logoLink.href = '.index.html';
+
 } else {
     logoUrl = '../img/logo.png';
+    logoLink.href = '../../index.html';
+
 }
 logoImg.src = logoUrl;
 logoImg.alt = 'logo';
