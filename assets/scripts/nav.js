@@ -44,7 +44,7 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
         const path = window.location.pathname;
         let url = '';
         // Проверка путей, включая вариант для GitHub Pages
-        const isRootPath = path === '/' || path.endsWith('/index.html') || path.endsWith('/repo-name/') || path.endsWith('/repo-name/index.html');
+        const isRootPath = path === '/' || path.endsWith('/index.html') || path.endsWith('/bakery_one/') || path.endsWith('/bakery_one/index.html');
         
         if (isRootPath) {
             url = './assets/html/' + obj.url;
