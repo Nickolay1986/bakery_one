@@ -453,6 +453,7 @@ body{
     height: auto;   /* что бы сжималось пропорционально своим размерам */
 }
 .wrapper{
+    min-width: 320px;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 15px;
@@ -1279,10 +1280,18 @@ body{
         border-radius: 15px;
         overflow: hidden;
         width: 100%;
-        height: 495px;
+        height: auto;
         cursor: pointer;
         background: var(--light);
         padding: 15px;
+    }
+    .card__pic{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .card__pic img {
+        width: 100%;
+        height: auto;
     }
     .modal__wrapper {    
         width: 344px;        
