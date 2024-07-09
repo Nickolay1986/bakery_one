@@ -1267,26 +1267,25 @@ body{
     .ymaps-2-1-79-balloon{
         /* блок балуна */
         background-color: #ffffff;
-        width: 33vh;
+        width: 35vh;
     }  
-    .balloon{
+    /* .balloon{
         width: 250px;
-    } 
+    }  */
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 401px){
     .modal__wrapper {    
         width: 344px;        
     }
     .modal__pic{
         width: 310px;
     }
-    .ymaps-2-1-79-balloon{
-        /* блок балуна */
+    /* .ymaps-2-1-79-balloon{
         background-color: #ffffff;
         width: 100%;
     }  
     .balloon{
         width: 100%;
-    } 
+    }  */
 }
 /* media end */

@@ -66,17 +66,17 @@ function init() {
         iconImageOffset: [-45, -65]
     });
 
-    map.controls.remove('geolocationControl');
-    map.controls.remove('searchControl');
-    map.controls.remove('trafficControl');
-    map.controls.remove('typeSelector');
-    map.controls.remove('zoomControl');
-    map.controls.remove('rulerControl');
-    map.behaviors.disable(['scrollZoom']);
+    map.controls.remove('geolocationControl'); //убрать геолокацию
+    map.controls.remove('searchControl');      //убрать поиск 
+    map.controls.remove('trafficControl');     //убрать контроль трафика 
+    map.controls.remove('typeSelector');       //убрать тип 
+    map.controls.remove('zoomControl');        //убрать зум
+    map.controls.remove('rulerControl');       //убрать уонтроль правил 
+    map.behaviors.disable(['scrollZoom']);     //откл скрол карты 
     map.behaviors.disable(['drag']);
     // map.geoObjects.add(placemark);
     map.geoObjects.add(placemarkBakery2);
-    placemarkBakery2.balloon.open();
+    // placemarkBakery2.balloon.open();
 
     // Функция, которая включает scrollZoom и drag при клике на карту
     function enableBehaviors() {
