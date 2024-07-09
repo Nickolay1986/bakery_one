@@ -13,7 +13,7 @@ const logoImg = createElWithClass('img', 'header__logo-pic');
 let logoUrl;
 if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.hostname === 'nickolay1986.github.io') {
     logoUrl = './assets/img/logo.png';
-    logoLink.href = '.index.html';
+    logoLink.href = './index.html';
 
 } else {
     logoUrl = '../img/logo.png';
