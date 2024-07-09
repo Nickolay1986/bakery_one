@@ -41,17 +41,11 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
 
     function createListItem(obj, selectedLanguage) {
         const listItem = createElWithClass('li', 'header__item');
-        const path = window.location.pathname;
-        let url = '';
-        // Проверка путей, включая вариант для GitHub Pages
-        const isRootPath = path === '/' || path.endsWith('/index.html') || path.endsWith('/bakery_one/') || path.endsWith('/bakery_one/index.html');
-        
-        if (isRootPath) {
-            url = './assets/html/' + obj.url;
-        } else {
-            url = './' + obj.url;
-        }
-        
+
+        // Определяем базовый путь для GitHub Pages
+        const basePath = window.location.hostname === 'nickolay1986.github.io' ? '/bakery_one/' : '/';
+
+        const url = basePath + 'assets/html/' + obj.url;
         const link = createElWithClass('a', 'header__link');
         link.href = url;
 
@@ -75,19 +69,17 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
     function handleLanguageChange(event) {
         const selectedLanguage = event.target.value;
         localStorage.setItem('selectedLanguage', selectedLanguage);
-        /*пользовательское событие*/
         const languageChangeEvent = new CustomEvent('languageChanged', { detail: selectedLanguage });
         window.dispatchEvent(languageChangeEvent);
-        /*пользовательское событие*/
 
         fetch(jsonUrl)
             .then(response => response.json())
             .then(data => updateListItems(headerList, data, selectedLanguage))
             .catch(error => {
-                console.error('Ошибка при загрузке файла products.json:', error);
+                console.error('Ошибка при загрузке файла nav.json:', error);
             });
     }
-    
+
     const nav = createNavElement();
     const headerList = createListElement(nav);
 
@@ -114,7 +106,7 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
             body.style.overflow = 'hidden'; // Добавляем свойство, если его нет
         }
     });
-}());
+})();
 
 (function () {
     const header = document.querySelector('.header');
@@ -131,4 +123,4 @@ import { createElWithClass } from "./modules/module-createElWithClass.js";
 
         prevScrollPos = currentScrollPos;
     };
-}());
+})();
