@@ -1274,6 +1274,16 @@ body{
     }  */
 }
 @media screen and (max-width: 401px){
+    .card{
+        border: 1px solid var(--middle);
+        border-radius: 15px;
+        overflow: hidden;
+        width: 100%;
+        height: 495px;
+        cursor: pointer;
+        background: var(--light);
+        padding: 15px;
+    }
     .modal__wrapper {    
         width: 344px;        
     }
